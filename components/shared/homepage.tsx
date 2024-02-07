@@ -7,7 +7,7 @@ const HomePage = () => {
           Cedeno Corneja CPAs Co.
         </h1>
         <div className="text-center text-[26px] text-[#194219] font-semibold ">
-          "Compliance is better than Compromise"
+          Compliance is better than Compromise
         </div>
         <div className="flex flex-col items-center p-20 ">
           <Link
@@ -19,7 +19,7 @@ const HomePage = () => {
         </div>
         <div className="text-center  container mx-auto">
           <h1 className="text-[40px] font-serif font-extrabold">
-            "All About Us
+            All About Us
           </h1>
 
           <div className="m-auto mx-10 mt-14 text-[15px] text-justify transition-transform">
@@ -42,13 +42,13 @@ const HomePage = () => {
                 Unit 2-C 2nd Floor of GV Square Building, Casa Milan,
                 Commonwealth Avenue in Quezon City.
               </span>
-              The firm's commitment to upholding industry standards is evident
+              The firm commitment to upholding industry standards is evident
               through its membership in the Philippine Institute of Certified
               Public Accountants and its accreditations with BOA, BIR, and CDA.
               Backed by a wealth of experiences and a track record of delivered
               engagements, Cedeno Corneja CPAs Co. is an alternative partner of
               businesses seeking to achieve financial stability and growth. The
-              firm's dedication to delivering quality services and personalized
+              firm dedication to delivering quality services and personalized
               attention to its clients sets it apart from the competition.
             </p>
           </div>
