@@ -13,7 +13,7 @@ function Header() {
   // ***List of navigation links***/
   const links = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
+    // { label: "About", href: "/about" },
     { label: "Sevices", href: "/services" },
     { label: "Team", href: "/team" },
     { label: "Contact", href: "/contact" },
