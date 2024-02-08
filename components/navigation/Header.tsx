@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import cclogo from "@/public/assets/CCLogo.png";
-
+import classnames from "classnames";
 
 function Header() {
   //**Highlight Navigation Link **/
@@ -43,10 +43,12 @@ function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`${
-                link.href === currentPath ? "bg-slate-100" : "bg-[#acc2ac]"
-              } rounded-full px-5 py-2 shadow-lg hover:bg-slate-200 transition-all`}
-            >
+              className={classnames({
+                "bg-slate-100": link.href === currentPath,
+                "bg-[#acc2ac]": link.href !== currentPath,
+                "rounded-full px-5 py-2 shadow-lg hover:bg-slate-200 transition-all":
+                  true,
+              })}            >
               {link.label}
             </Link>
           ))}
