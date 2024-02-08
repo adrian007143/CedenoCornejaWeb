@@ -14,7 +14,7 @@ function Header() {
   const links = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Sevices", href: "/svcs" },
+    { label: "Sevices", href: "/services" },
     { label: "Team", href: "/team" },
     { label: "Contact", href: "/contact" },
   ];
