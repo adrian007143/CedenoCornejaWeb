@@ -16,8 +16,8 @@ const NavFooter = () => {
   ];
 
   return (
-    <div className="flex item-center w-full">
-      <div className="text-center justify-between py-5 px-4">
+    <div className="flex item-center w-full mt-auto">
+      <div className="text-center text-gray-950 justify-between py-5 px-4">
         ©2024 by Cedeno Corneja CPAs Co.
       </div>
       <div className="flex justify-end item-center flex-auto">

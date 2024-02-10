@@ -1,7 +1,6 @@
-import Header from "@/components/navigation/Header";
-import Footer from "@/components/navigation/Footer";
 import AcctgImage from "@/public/assets/wallpaperacctg.jpg";
 import NextImg from "next/image";
+import Container from "@/components/shared/container";
 
 interface childProps {
   children: React.ReactNode;
@@ -9,10 +8,9 @@ interface childProps {
 
 const Pagelayout = ({ children }: childProps) => {
   return (
-    <main>
-      <Header />
+    <div>
       <div className="h-full pt-16 bg-stone-200 bg-opacity-50">
-        {children}
+        <Container>{children}</Container>
         <NextImg
           src={AcctgImage}
           alt="background"
@@ -22,8 +20,7 @@ const Pagelayout = ({ children }: childProps) => {
           style={{ objectFit: "cover" }}
         />
       </div>
-      <Footer />
-    </main>
+    </div>
   );
 };
 
