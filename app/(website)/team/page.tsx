@@ -1,5 +1,5 @@
 import Image from "next/image";
-import adrian from "@/public/pictures/adrian.jpg"
+import Adrian from "@/public/pictures/Adrian.jpg"
 
 
 function Team() {
@@ -13,7 +13,7 @@ function Team() {
       </div>
     <div>
      <Image
-     src={adrian}
+     src={Adrian}
      alt="adrian"
      width={200}
      height={200}
