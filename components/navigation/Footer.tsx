@@ -2,30 +2,30 @@ import Link from "next/link";
 import { BsFacebook, BsLinkedin, BsYoutube } from "react-icons/bs";
 
 const NavFooter = () => {
+  const socialMedia = [
+    //***Add here new social media links***
+    { href: "https://web.facebook.com/cedeno.corneja", icon: <BsFacebook /> },
+    {
+      href: "https://www.linkedin.com/company/cedeno-corneja-cpas-co",
+      icon: <BsLinkedin />,
+    },
+    {
+      href: "https://www.youtube.com/channel/UC7joGXDAXh4RqA1YX1YD27Q",
+      icon: <BsYoutube />,
+    },
+  ];
+
   return (
     <div className="flex item-center w-full">
       <div className="text-center justify-between py-5 px-4">
         ©2024 by Cedeno Corneja CPAs Co.
       </div>
       <div className="flex justify-end item-center flex-auto">
-        <Link
-          href="https://web.facebook.com/cedeno.corneja"
-          className="m-5 text-[30px]"
-        >
-          <BsFacebook />
-        </Link>
-        <Link
-          href="https://www.linkedin.com/company/cedeno-corneja-cpas-co"
-          className="m-5 text-[30px]"
-        >
-          <BsLinkedin />
-        </Link>
-        <Link
-          href="https://www.youtube.com/channel/UC7joGXDAXh4RqA1YX1YD27Q"
-          className="m-5 text-[30px]"
-        >
-          <BsYoutube />
-        </Link>
+        {socialMedia.map((link) => (
+          <Link key={link.href} href={link.href} className="m-5 text-[30px]">
+            {link.icon}
+          </Link>
+        ))}
       </div>
     </div>
   );

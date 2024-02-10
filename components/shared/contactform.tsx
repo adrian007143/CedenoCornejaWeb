@@ -30,51 +30,48 @@ const Contactform = () => {
 
       <form onSubmit={handleSubmit} className="mt-10">
         <div className="flex item-center justify-center flex-col gap-5">
-          <div className="flex items-center justify-center gap-5">
-            <div className="flex flex-col items-center justify-center gap-5">
-              <Input
-                onChange={(e) => setFirstname(e.target.value)}
-                value={firstname}
-                type="text"
-                name="firstname"
-                required
-                id="firstname"
-                className="input input-bordered w-full max-w rounded-md"
-                placeholder="First Name"
-              />
-              <Input
-                onChange={(e) => setLastname(e.target.value)}
-                value={lastname}
-                type="text"
-                name="lastname"
-                id="lastname"
-                required
-                className="input input-bordered w-full max-w"
-                placeholder="Last Name"
-              />
-            </div>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <Input
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-                type="email"
-                name="email"
-                id="email"
-                required
-                className="input input-bordered w-full max-w"
-                placeholder="Email Address"
-              />
-              <Input
-                onChange={(e) => setContact(e.target.value)}
-                value={contact}
-                type="text"
-                name="contact"
-                id="contact"
-                required
-                className="input input-bordered w-full max-w"
-                placeholder="Phone or Mobile number"
-              />
-            </div>
+          <div className="flex flex-col items-center justify-center gap-5" style={{minWidth: 400, maxHeight: 500}}>
+            <Input
+              onChange={(e) => setFirstname(e.target.value)}
+              value={firstname}
+              type="text"
+              name="firstname"
+              required
+              id="firstname"
+              className="input input-bordered w-full max-w rounded-md"
+              placeholder="First Name"
+            />
+            <Input
+              onChange={(e) => setLastname(e.target.value)}
+              value={lastname}
+              type="text"
+              name="lastname"
+              id="lastname"
+              required
+              className="input input-bordered w-full max-w"
+              placeholder="Last Name"
+            />
+
+            <Input
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              type="email"
+              name="email"
+              id="email"
+              required
+              className="input input-bordered w-full max-w"
+              placeholder="Email Address"
+            />
+            <Input
+              onChange={(e) => setContact(e.target.value)}
+              value={contact}
+              type="text"
+              name="contact"
+              id="contact"
+              required
+              className="input input-bordered w-full max-w"
+              placeholder="Phone or Mobile number"
+            />
           </div>
           <Textarea
             onChange={(e) => setMessage(e.target.value)}
@@ -83,7 +80,9 @@ const Contactform = () => {
             placeholder="Message"
             required
           ></Textarea>
-          <Button variant="outline" className="bg-[#839083] shadow-2xl mt-10 ">Submit</Button>
+          <Button variant="outline" className="bg-[#839083] shadow-2xl mt-10 ">
+            Submit
+          </Button>
         </div>
       </form>
     </div>

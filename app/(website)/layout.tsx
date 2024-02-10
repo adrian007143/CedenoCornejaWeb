@@ -19,7 +19,7 @@ const Pagelayout = ({ children }: childProps) => {
           quality={100}
           className="-z-10 object-cover opacity-25 "
           fill
-          objectFit="cover"
+          style={{ objectFit: "cover" }}
         />
       </div>
       <Footer />
