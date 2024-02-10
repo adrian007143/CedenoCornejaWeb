@@ -15,9 +15,9 @@ function Team() {
      <Image
      src={adrian}
      alt="adrian"
-     width={300}
-     height={300}
-     
+     width={200}
+     height={200}
+     className="rounded-full shadow-lg"     
      />
 
     </div>
