@@ -1,3 +1,6 @@
+import Image from "next/image";
+import adrian from "@/public/pictures/adrian.jpg"
+
 
 function Team() {
   return (
@@ -8,6 +11,18 @@ function Team() {
         </div>
         <div>We’re Here To Help</div>
       </div>
+    <div>
+     <Image
+     src={adrian}
+     alt="adrian"
+     width={300}
+     height={300}
+     
+     />
+
+    </div>
+
+
     </div>
   );
 }
