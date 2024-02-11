@@ -5,7 +5,7 @@ import Thelma from "@/public/pictures/Thelma.jpg";
 
 function Team() {
   return (
-    <div className="flex flex-col mx-10 mt-18 mb-20">
+    <div className="flex flex-col  mb-20">
       <div className="flex flex-col text-center justify-center mx-40">
         <div className="text-[30px] mt-2 mb-5 text-[#0d350df9] font-extrabold">
           Our Team

@@ -1,13 +1,13 @@
 
 interface containerProps{
     children: React.ReactNode,
-    classNames?: string,
+    className?: string,
     }
 
 
-function Container({children, classNames}:containerProps) {
+function Container({children, className}:containerProps) {
   return (
-    <div className={`max-auto w-full px-4${classNames}`}>{children}</div>
+    <div className={`max-auto w-full px-4 ${className}`}>{children}</div>
   )
 }
 export default Container
