@@ -21,7 +21,7 @@ function Header() {
   ];
 
   return (
-    <nav className="flex item-center  gap-20 bg-[#d1d9dc] bg-opacity-60 w-full shadow-lg fixed p-3 ">
+    <nav className="flex item-center  gap-20 bg-[#d0ddcc] bg-opacity-80 w-full shadow-lg fixed p-3 ">
       <Container className="flex items-center justify-between gap-20">
         <div className="flex items-center justify-start">
           <Link href="/" className="px-8 py-0">
@@ -44,8 +44,8 @@ function Header() {
                 href={link.href}
                 className={classnames({
                   "bg-slate-100": link.href === currentPath,
-                  "bg-[#acc2ac]": link.href !== currentPath,
-                  "rounded-full px-5 py-2 shadow-lg hover:bg-slate-200 transition-all":
+                  "bg-[#515f53] text-[white]": link.href !== currentPath,
+                  "rounded-full px-5 py-2 shadow-lg hover:bg-slate-200 hover:text-black transition-all":
                     true,
                 })}
               >
