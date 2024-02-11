@@ -12,7 +12,7 @@ const HomePage = () => {
         <div className="flex flex-col items-center p-20 ">
           <Link
             href="/team"
-            className=" rounded-full py-3 px-6 bg-[#1b381b] text-white hover:bg-slate-100 transition-colors hover:text-black shadow-inherit"
+            className=" rounded-full py-3 px-6 bg-[#1b381b] text-white hover:bg-slate-100 hover:text-black shadow-inherit"
           >
             Learn More
           </Link>
