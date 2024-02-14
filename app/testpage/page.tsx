@@ -1,9 +1,9 @@
-import Formtesting from "@/components/shared/formtesting";
+import ContactUs from "@/components/shared/formContact";
 
 const TestPage = async () => {
   return (
     <div>
-      <Formtesting/>
+      <ContactUs/>
     </div>
   );
 };

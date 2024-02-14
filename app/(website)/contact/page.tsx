@@ -1,11 +1,11 @@
-import Contactform from "@/components/shared/contactform";
+import ContactUs from "@/components/shared/formContact";
 
-const ContactUs = () => {
+const Contact = () => {
   return (
-    <div className="flex items-center justify-center pt-10">
-      <Contactform />
+    <div className="flex items-center justify-center ">
+      <ContactUs/>
     </div>
   );
 };
 
-export default ContactUs;
+export default Contact;

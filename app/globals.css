@@ -96,7 +96,7 @@
 }
 
 .animate-fadeInUp {
-  animation: fadeInUp 0.5s ease-in-out; /* Adjust the duration and timing function */
+  animation: fadeInUp 0.8s ease-in-out; /* Adjust the duration and timing function */
 }
 
 /* Pagelayout.module.css */
