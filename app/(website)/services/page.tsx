@@ -1,3 +1,6 @@
+"use client"
+
+
 import Image from "next/image";
 import Accounting from "@/public/assets/accounting.jpg";
 import {
@@ -8,9 +11,16 @@ import {
   BsFillBuildingsFill,
   BsFillPeopleFill,
 } from "react-icons/bs";
-import { list } from "postcss";
+import { useEffect, useState } from "react";
 
 function Services() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Set isVisible to true after component mounts
+    setIsVisible(true);
+  }, []);
+
   const serviceLists = [
     {
       id: 1,
@@ -45,20 +55,20 @@ function Services() {
   ];
 
   return (
-    <div>
-      <div className="text-[30px] font-extrabold text-[#173d17] text-center p-5">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-5">
+      <div className={`text-[30px] font-extrabold text-[#173d17] text-center p-5 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 transition-all duration-500 ease-in-out'}`}>
         Our Services
       </div>
 
-      <div className="p-5 grid grid-flow-col gap-5 text-[18px]">
-        <div className=" flex flex-col">
+      <div className={`grid grid-cols-1 sm:grid-cols-2 gap-5 text-[18px] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 transition-all duration-500 ease-in-out'}`}>
+        <div className="flex flex-col">
           {serviceLists.map((serviceList) => (
             <ul
               key={serviceList.id}
-              className="flex gap-5 m-8 text-xl items-center"
+              className="flex gap-5 m-5 text-xl items-center animate-fadeInUp"
             >
-              <div> {serviceList.icon} </div>
-              <div> {serviceList.description}</div>
+              <div>{serviceList.icon}</div>
+              <div>{serviceList.description}</div>
             </ul>
           ))}
         </div>
@@ -69,7 +79,7 @@ function Services() {
             width={800}
             height={1200}
             alt="picture of services"
-            className="rounded-md shadow-lg"
+            className="rounded-md shadow-lg animate-fadeInUp"
           />
         </div>
       </div>

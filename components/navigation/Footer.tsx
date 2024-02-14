@@ -21,7 +21,7 @@ const NavFooter = () => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row items-center w-full mt-auto">
+    <div className="flex flex-col lg:flex-row items-center w-full mt-auto bg-[#c4d4c4] bg-opacity-75 shadow-lg">
       <div className="text-center text-gray-950 py-5 px-4 lg:order-2 lg:flex-1">
         ©2024 by Cedeno Corneja CPAs Co.
       </div>
@@ -30,7 +30,7 @@ const NavFooter = () => {
           <Link
             key={link.href}
             href={link.href}
-            className="m-2 lg:m-5 text-[30px] hover:text-blue-500"
+            className="m-2 lg:m-5 text-[30px] hover:text-[black] text-blue-500 "
             target="_blank"
             rel="noopener noreferrer"
             aria-label={link.name}

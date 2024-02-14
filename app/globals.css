@@ -83,3 +83,37 @@
   height: 100%;
   z-index: -1;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Adjust the distance to move upward */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-in-out; /* Adjust the duration and timing function */
+}
+
+/* Pagelayout.module.css */
+.content {
+  padding-top: 4rem; /* Adjust according to your design */
+  min-height: 100vh; /* Ensure content fills the viewport */
+}
+
+.background {
+  animation: moveBackground 20s infinite alternate linear;
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(50%) translateY(50%);
+  }
+}
