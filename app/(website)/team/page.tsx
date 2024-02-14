@@ -5,15 +5,11 @@ import Thelma from "@/public/pictures/Thelma.jpg";
 
 function Team() {
   return (
-    <div className="flex flex-col  mb-20">
-      <div className="flex flex-col text-center justify-center mx-40">
-        <div className="text-[30px] mt-2 mb-5 text-[#0d350df9] font-extrabold">
-          Our Team
-        </div>
-        <div className="mb-10 font-semibold text-[#1b291b]">
-          We’re Here To Help
-        </div>
-        <p>
+    <div className="flex flex-col md:mx-auto md:max-w-4xl">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-extrabold text-green-900 mb-5 transition-all duration-500 ease-in-out">Our Team</h2>
+        <p className="font-semibold text-gray-700 transition-all duration-500 ease-in-out">We’re Here To Help</p>
+        <p className="mt-4 text-gray-700 transition-all duration-500 ease-in-out">
           Our team of certified accounting professionals works diligently and
           collaboratively to bring you individualized attention and effective,
           timely financial management solutions. At Cedeno Corneja CPAs Co., we
@@ -22,53 +18,33 @@ function Team() {
           us.
         </p>
       </div>
-      {/* start here */}
-      <div className="lg:flex lg:justify-start lg:flex-col lg:mt-10 gap-20 lg:mx-40 md:m-auto md:flex md:flex-col">
-        <div className="flex md:mt-5">
-          <div style={{minWidth: 100, 
-            maxWidth: 250,
-            minHeight: 100,
-            maxHeight: 250,}}>
-            <Image
-              src={Norberto}
-              alt="Norberto"
-              width={250}
-              height={250}
-              className="rounded-full shadow-lg"
-              
-            />
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+        {/* Norberto's section */}
+        <div className="flex justify-center items-center flex-col border-b border-gray-300 pb-6 transition-all duration-500 ease-in-out transform hover:scale-105">
+          <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg mb-4">
+            <Image src={Norberto} alt="Norberto" layout="responsive" />
           </div>
-          <div className="flex flex-col gap-4 mx-10 ">
-            <h1 className="font-extrabold text-[22px]">
-              Norberto Corneja, CPA
-            </h1>
-            <p>Managing Partner</p>
-            <p>
+          <div className="text-center">
+            <h3 className="text-xl font-extrabold text-green-900 mb-2 transition-all duration-500 ease-in-out">Norberto Corneja, CPA</h3>
+            <p className="font-semibold mb-1 text-gray-700 transition-all duration-500 ease-in-out">Managing Partner</p>
+            <p className="text-gray-700 transition-all duration-500 ease-in-out">
               Norberto Corneja has been the backbone of Cedeno Corneja CPAs Co.
               from the very beginning, making sure we’re as organized and
-              effective as possible in managing our client   accounting needs.
+              effective as possible in managing our client accounting needs.
               You can count on Norberto Corneja to be with you every step of the
-              way
+              way.
             </p>
           </div>
         </div>
-        <div className="flex">
-          <div style={{minWidth: 100, 
-            maxWidth: 250,
-            minHeight: 100,
-            maxHeight: 250,}}>
-            <Image
-              src={Adrian}
-              alt="adrian"
-              width={160}
-              height={160}
-              className="rounded-full shadow-lg"
-            />
+        {/* Adrian's section */}
+        <div className="flex justify-center items-center flex-col border-b border-gray-300 pb-6 transition-all duration-500 ease-in-out transform hover:scale-105">
+          <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg mb-4">
+            <Image src={Adrian} alt="Adrian" layout="responsive" />
           </div>
-          <div className="flex flex-col gap-4 mx-10 je">
-            <h1 className="font-extrabold text-[22px]">Adrian Cedeno, CPA</h1>
-            <p>Managing Partner</p>
-            <p>
+          <div className="text-center">
+            <h3 className="text-xl font-extrabold text-green-900 mb-2 transition-all duration-500 ease-in-out">Adrian Cedeno, CPA</h3>
+            <p className="font-semibold mb-1 text-gray-700 transition-all duration-500 ease-in-out">Managing Partner</p>
+            <p className="text-gray-700 transition-all duration-500 ease-in-out">
               Adrian Cedeno is one of the managing partners of the team with
               exposure to Accounting and Taxation. Contact us today to schedule
               a consultation.

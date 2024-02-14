@@ -1,7 +1,11 @@
-const page = () => {
-  return (
-    <div>This is Test page</div>
-  )
-}
+import Formtesting from "@/components/shared/formtesting";
 
-export default page
+const TestPage = async () => {
+  return (
+    <div>
+      <Formtesting/>
+    </div>
+  );
+};
+
+export default TestPage;
