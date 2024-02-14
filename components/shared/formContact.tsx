@@ -72,7 +72,7 @@ const ContactUs = () => {
               Contac us
             </h2>
 
-            <div className="relative mb-4 flex flex-col gap-5 pt-3">
+            <div className="relative mb-4 flex flex-col gap-5 pt-3 sm:p-2">
               {formInput.map((forminput) => (
                 <input
                   key={forminput.id}
@@ -85,7 +85,7 @@ const ContactUs = () => {
                 />
               ))}
             </div>
-            <div className="relative mb-4">
+            <div className="relative mb-4 sm:p-2">
               <textarea
                 id="message"
                 name="message"
