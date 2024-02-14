@@ -68,8 +68,8 @@ const ContactUs = () => {
             </div>
           </div>
           <form action={""} className="lg:w-1/3 md:w-1/2 bg-[#f0f4f5] shadow-2xl border-solid flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 lg:p-10 rounded-lg animate-fadeInUp">
-            <h2 className="text-gray-900 text-lg mb-1 title-font text-center font-extrabold">
-              Contac us
+            <h2 className="text-[#305937] font-sans text-lg mb-5 title-font text-center font-bold text-[33px] ">
+              Contact Us
             </h2>
 
             <div className="relative mb-4 flex flex-col gap-5 pt-3 sm:p-2">
