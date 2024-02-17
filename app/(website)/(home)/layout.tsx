@@ -1,5 +1,4 @@
 import AcctgImage from "@/public/assets/wallpaperacctg.jpg";
-import NextImg from "next/image";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
