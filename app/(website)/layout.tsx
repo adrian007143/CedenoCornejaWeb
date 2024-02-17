@@ -10,7 +10,7 @@ const Pagelayout = ({ children }: childProps) => {
   return (
     <div>
       <div className="h-full bg-stone-200 bg-opacity-50 pb-10">
-        <Container >{children}</Container>
+        <Container className="pt-12">{children}</Container>
         {/* <NextImg
           src={AcctgImage}
           alt="background"

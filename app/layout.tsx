@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${inter.className} flex flex-col h-[100dvh] `}>
         <Header />
         <main>
-          <Container className="pt-16">{children}</Container>
+          <Container >{children}</Container>
         </main>
         <NavFooter />
       </body>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -9,40 +9,31 @@ import classnames from "classnames";
 import Container from "../shared/container";
 
 function Header() {
+  // ** Highlight Navigation Link **
   const currentPath = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
 
-  useEffect(() => {
-    function handleScroll() {
-      const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
-
+  // *** List of navigation links ***
   const links = [
     { label: "Home", href: "/" },
+    // { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Team", href: "/team" },
     { label: "Contact", href: "/contact" },
+    // { label: "Testing", href: "/testpage" },
   ];
 
   return (
-    <nav
-      className={classnames(
-        "flex items-center bg-[#d0ddcc] bg-opacity-80 w-full shadow-lg fixed top-0 left-0 right-0 text-white p-4 z-10 transition-all",
-        { "transform translate-y-0": visible, "transform -translate-y-full": !visible }
-      )}
-    >
+    <nav className="flex items-center bg-[#d0ddcc] bg-opacity-80 w-full shadow-lg fixed top-0 left-0 right-0 text-white p-4 z-10">
       <Container className="flex items-center justify-between">
         <div className="flex items-center justify-start gap-4">
           <Link href="/" className="px-8 py-0">
-            <Image src={cclogo} width={90} height={90} alt="Company Logo" />
+            <Image 
+            src={cclogo} 
+            width={90} 
+            height={90} 
+            alt="Company Logo" 
+            />
           </Link>
           <p className="text-[16px] text-[#0d240d] font-medium hidden md:block">
             Auditing, Accounting, Tax and Management Advisory
