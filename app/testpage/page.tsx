@@ -1,5 +1,5 @@
 import FooterNew from "@/components/navigation/Footer";
-import ContactUs from "@/components/shared/formContact";
+import ContactUs from "@/components/shared/ContactForm";
 
 const TestPage = async () => {
   return (

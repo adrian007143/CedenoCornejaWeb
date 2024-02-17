@@ -1,92 +1,106 @@
-"use client";
 
-import { useState } from "react";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import { Textarea } from "../ui/textarea";
 
-const Contactform = () => {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [contact, setContact] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-
-    console.log("First Name:", firstname);
-    console.log("Last Name:", lastname);
-  };
+const ContactUs = () => {
+  const formInput = [
+    {
+      id: "firstName",
+      type: "text",
+      name: "firstName",
+      placeholder: "First Name",
+    },
+    {
+      id: "lastName",
+      type: "text",
+      name: "lastName",
+      placeholder: "Last Name",
+    },
+    { id: "email", type: "email", name: "email", placeholder: "Email Address" },
+    {
+      id: "contactNo",
+      type: "text",
+      name: "contactNo",
+      placeholder: "Contact Number",
+    },
+  ];
 
   return (
-    <div className=" rounded-lg shadow-2xl border p-14 bg-slate-200 bg-opacity-50 ">
-      <div className="text-center">
-        <h1 className="text-[30px] text-[#173d17] font-extrabold">
-          Contact Us
-        </h1>
-        <p className="mt-2">Please fill in the form below:</p>
-      </div>
-
-      <form onSubmit={handleSubmit} className="mt-10">
-        <div className="flex item-center justify-center flex-col gap-5">
-          <div className="flex flex-col items-center justify-center gap-5" style={{minWidth: 400, maxHeight: 500}}>
-            <Input
-              onChange={(e) => setFirstname(e.target.value)}
-              value={firstname}
-              type="text"
-              name="firstname"
-              required
-              id="firstname"
-              className="input input-bordered w-full max-w rounded-md"
-              placeholder="First Name"
-            />
-            <Input
-              onChange={(e) => setLastname(e.target.value)}
-              value={lastname}
-              type="text"
-              name="lastname"
-              id="lastname"
-              required
-              className="input input-bordered w-full max-w"
-              placeholder="Last Name"
-            />
-
-            <Input
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-              type="email"
-              name="email"
-              id="email"
-              required
-              className="input input-bordered w-full max-w"
-              placeholder="Email Address"
-            />
-            <Input
-              onChange={(e) => setContact(e.target.value)}
-              value={contact}
-              type="text"
-              name="contact"
-              id="contact"
-              required
-              className="input input-bordered w-full max-w"
-              placeholder="Phone or Mobile number"
-            />
+    <div>
+      <section className="text-gray-600 body-font relative">
+        <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+          <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative shadow-xl animate-fadeInUp">
+            <iframe
+              className="absolute inset-0"
+              width="100%"
+              height="100%"
+              title="map"
+              style={{
+                filter: "opacity(1)",
+                margin: "0",
+                border: "none",
+                overflow: "hidden",
+              }}
+              src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=cedeno corneja&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ></iframe>
+            <div className="bg-white relative flex flex-wrap py-6 rounded shadow-2xl bg-opacity-90 border-solid">
+              <div className="lg:w-1/2 px-6">
+                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
+                  ADDRESS:
+                </h2>
+                <p className="mt-1">
+                  Unit 2-C 2nd Floor GV Square Building Commonwealth Avenue,
+                  Brgy. Greater Lagro Quezon City{" "}
+                </p>
+              </div>
+              <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
+                  EMAIL:
+                </h2>
+                <a href="mailto:cedeno.corneja@gmail.com" className="text-indigo-500 leading-relaxed">
+                  cedeno.corneja@gmail.com
+                </a>
+                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
+                  CONTACT NUMNER:
+                </h2>
+                <p className="leading-relaxed">(02)709-26854 </p>
+                <p className="leading-relaxed">+639095038581</p>
+                <p className="leading-relaxed">+639178502650</p>
+              </div>
+            </div>
           </div>
-          <Textarea
-            onChange={(e) => setMessage(e.target.value)}
-            value={message}
-            className="rounded-lg justify-center h-60 "
-            placeholder="Message"
-            required
-          ></Textarea>
-          <Button variant="outline" className="bg-[#839083] shadow-2xl mt-10 ">
-            Submit
-          </Button>
+          <form action={""} className="lg:w-1/3 md:w-1/2 bg-[#f0f4f5] shadow-2xl border-solid flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 lg:p-10 rounded-lg animate-fadeInUp">
+            <h2 className="text-[#305937] font-sans text-lg mb-5 title-font text-center font-bold text-[33px] ">
+              Contact Us
+            </h2>
+
+            <div className="relative mb-4 flex flex-col gap-5 pt-3 sm:p-2">
+              {formInput.map((forminput) => (
+                <input
+                  key={forminput.id}
+                  type={forminput.type}
+                  id={forminput.id}
+                  placeholder={forminput.placeholder}
+                  name={forminput.name}
+                  required
+                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              ))}
+            </div>
+            <div className="relative mb-4 sm:p-2">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Message"
+                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              ></textarea>
+            </div>
+            <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              Submit
+            </button>
+          </form>
         </div>
-      </form>
+      </section>
     </div>
   );
 };
 
-export default Contactform;
+export default ContactUs;

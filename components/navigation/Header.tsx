@@ -35,7 +35,7 @@ function Header() {
   return (
     <nav
       className={classnames(
-        "flex items-center bg-[#d0ddcc] bg-opacity-80 w-full shadow-lg fixed top-0 left-0 right-0 text-white p-4 z-10 transition-all",
+        "flex items-center bg-[#eaefe9] bg-opacity-80 w-full shadow-lg fixed top-0 left-0 right-0 text-white p-4 z-10 transition-all",
         { "transform translate-y-0": visible, "transform -translate-y-full": !visible }
       )}
     >
