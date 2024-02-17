@@ -47,7 +47,7 @@ const ContactUs = () => {
                   ADDRESS:
                 </h2>
                 <p className="mt-1">
-                  Unit 2-C 2nd FloorGV Square Building Commonwealth Avenue,
+                  Unit 2-C 2nd Floor GV Square Building Commonwealth Avenue,
                   Brgy. Greater Lagro Quezon City{" "}
                 </p>
               </div>
