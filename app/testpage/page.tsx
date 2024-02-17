@@ -1,10 +1,9 @@
-import FooterNew from "@/components/navigation/Footer";
-import ContactUs from "@/components/shared/ContactForm";
+
 
 const TestPage = async () => {
   return (
     <div>
-      <FooterNew/>
+      this is test page
     </div>
   );
 };

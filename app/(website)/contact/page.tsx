@@ -1,10 +1,9 @@
-import ContactForm from "@/components/shared/ContactForm";
+import ContactUs from "@/components/shared/FormContact";
+
 const Contact = () => {
   return (
     <div className="flex items-center justify-center ">
-      
-      <ContactForm/>
-    
+      <ContactUs/>
     </div>
   );
 };
