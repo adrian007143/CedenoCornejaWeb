@@ -11,16 +11,19 @@ const FooterNew = () => {
       href: "https://web.facebook.com/cedeno.corneja",
       icon: <BsFacebook />,
       name: "Facebook",
+      classname:"m-2 lg:m-5 text-[30px] hover:text-[black] text-blue-600 ",
     },
     {
       href: "https://www.linkedin.com/company/cedeno-corneja-cpas-co",
       icon: <BsLinkedin />,
       name: "LinkedIn",
+      classname:"m-2 lg:m-5 text-[30px] hover:text-[black] text-blue-700 "
     },
     {
       href: "https://www.youtube.com/channel/UC7joGXDAXh4RqA1YX1YD27Q",
       icon: <BsYoutube />,
       name: "YouTube",
+      classname:"m-2 lg:m-5 text-[35px] hover:text-[black] text-red-600 "
     },
   ];
 
@@ -36,12 +39,13 @@ const FooterNew = () => {
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           © 2024 Cedeno Corneja Cpas Co.
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
+          <div>Follow us: </div>
           {socialMedia.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="m-2 lg:m-5 text-[30px] hover:text-[black] text-blue-500 "
+              className= {link.classname}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.name}

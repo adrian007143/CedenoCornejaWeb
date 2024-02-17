@@ -16,7 +16,7 @@ function Header() {
 
   useEffect(() => {
     function handleScroll() {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
       setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
       setPrevScrollPos(currentScrollPos);
     }
