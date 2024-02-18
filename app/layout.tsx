@@ -8,7 +8,7 @@ import Container from "@/components/shared/container";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Welcome to Cedeno Corneja CPAs Co.",
+  title: "Auditing | Cedeno Corneja CPAs Co.",
   description: "Compliance is better than Compromise",
   icons: {
     icon: ["/favicon.ico?v=4"],
