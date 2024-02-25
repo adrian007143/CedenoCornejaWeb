@@ -34,7 +34,7 @@ export async function create(formData: FormData) {
     },
   });
 
-  revalidatePath("/");
+  revalidatePath("/testpage");
 }
 
 

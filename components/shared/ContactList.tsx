@@ -1,5 +1,5 @@
 import { getContacts } from "@/app/action/contactAction";
-
+import { Button } from "../ui/button";
 
 export default async function ContactList() {
   const { contacts } = await getContacts();
@@ -22,9 +22,15 @@ export default async function ContactList() {
               <tr key={contact.id}>
                 <td className="p-3">{contact.firstname}</td>
                 <td className="p-3">{contact.lastname}</td>
-                <td className="p-3">{contact.contactNo}</td>
+                <td className="p-3">{contact.contactno}</td>
                 <td className="p-3">{contact.email}</td>
                 <td className="p-3">{contact.message}</td>
+                <td className="p-0">
+                  <Button variant="destructive">Delete</Button>
+                </td>
+                <td className="p-0">
+                  <Button variant="outline">Edit</Button>
+                </td>
               </tr>
             ))}
           </tbody>

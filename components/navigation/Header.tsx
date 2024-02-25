@@ -8,6 +8,8 @@ import cclogo from "@/public/assets/CCLogo.png";
 import classnames from "classnames";
 import Container from "../shared/container";
 
+import { navLinks } from "@/constants";
+
 function Header() {
   const currentPath = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,13 +26,6 @@ function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
-
-  const links = [
-    { label: "Home", href: "/" },
-    { label: "Services", href: "/services" },
-    { label: "Team", href: "/team" },
-    { label: "Contact", href: "/contact" },
-  ];
 
   return (
     <nav
@@ -50,7 +45,7 @@ function Header() {
         </div>
         <div className="hidden md:flex items-center gap-5">
           <ul className="flex items-center gap-5">
-            {links.map((link) => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -93,7 +88,7 @@ function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-[#d0ddcc] bg-opacity-80 w-full py-4">
           <ul className="flex flex-col items-center gap-4">
-            {links.map((link) => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}

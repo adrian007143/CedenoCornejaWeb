@@ -5,6 +5,7 @@ import Image from "next/image";
 import cclogo from "@/public/assets/CCLogo.png";
 import { BsFacebook, BsLinkedin, BsYoutube } from "react-icons/bs";
 
+
 const FooterNew = () => {
   const socialMedia = [
     {
