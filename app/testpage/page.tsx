@@ -1,5 +1,5 @@
 import ContactForm from "@/components/shared/AddContact";
-import ContactList from "@/components/shared/ContactList";
+import ContactList from "@/components/shared/ContactListNew";
 
 
 const TestPage = async () => {

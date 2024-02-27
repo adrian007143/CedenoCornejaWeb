@@ -37,6 +37,40 @@ export async function create(formData: FormData) {
   revalidatePath("/testpage");
 }
 
+export async function editForm(formData: FormData) {
+  "use server";
+  const id = formData.get("id") as string;
+  const firstname = formData.get("firstname") as string;
+  const lastname = formData.get("lastname") as string;
+  const email = formData.get("email") as string;
+  const contactno = formData.get("contactno") as string;
+  const message = formData.get("message") as string;
 
+  await prisma.contact.update({
+    where: {
+      id: id,
+    },
+    data: {
+      firstname: firstname,
+      lastname: lastname,
+      email: email,
+      contactno: contactno,
+      message: message,
+    },
+  });
+  revalidatePath("/testpage");
+}
 
+export async function deleteContact(formData: FormData) {
+  "use server";
 
+  const id = formData.get("id") as string;
+
+  await prisma.contact.delete({
+    where: {
+      id: id,
+    },
+  });
+
+  revalidatePath("/testpage");
+}
