@@ -37,7 +37,7 @@ export async function create(formData: FormData) {
   revalidatePath("/testpage");
 }
 
-export async function editForm(formData: FormData) {
+export async function editContact(formData: FormData) {
   "use server";
   const id = formData.get("id") as string;
   const firstname = formData.get("firstname") as string;

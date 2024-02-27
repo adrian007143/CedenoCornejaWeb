@@ -72,6 +72,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: linear-gradient(to top, #527e6b 0%, #b5ead9 100%);
   }
 }
 

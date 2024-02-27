@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col h-[100dvh] `}>
+      <body className={`${inter.className} flex flex-col`}>
         <Header />
         <main>
           <Container >{children}</Container>

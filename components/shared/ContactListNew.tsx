@@ -1,4 +1,4 @@
-import { getContacts, editForm, deleteContact } from "@/app/action/contactAction";
+import { getContacts, editContact, deleteContact } from "@/app/action/contactAction";
 import { Button } from "../ui/button";
 
 export default async function ContactListNew() {
@@ -10,7 +10,7 @@ export default async function ContactListNew() {
         {contacts?.map((contact: any) => (
           <div key={contact.id}>
             <div className="flex gap-2">
-              <form className=" flex flex-auto gap-2 my-2" action={editForm}>
+              <form className=" flex flex-auto gap-2 my-2" action={editContact}>
                 <input type="hidden" name="id" value={contact.id}/>
                 <input
                   type="text"
