@@ -1,4 +1,4 @@
-import AddContact from "./AddContact";
+import ContactForm from "./ContactFrom";
 
 const ContactUs = () => {
    return (
@@ -45,7 +45,7 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
-          <AddContact/>
+          <ContactForm/>
         </div>
       </section>
     </div>

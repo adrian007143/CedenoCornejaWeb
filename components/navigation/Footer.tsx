@@ -29,7 +29,7 @@ const FooterNew = () => {
   ];
 
   return (
-    <footer className="text-gray-600 body-font bottom-0 w-full bg-[#eaefe9] border-t border-gray-200">
+    < footer className="text-gray-600 body-font bottom-0 w-full bg-[#eaefe9] border-t border-gray-200 opacity-90">
       <div className="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
         <div className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
           <Link href="/" className="px-8 py-0">

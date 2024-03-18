@@ -34,12 +34,12 @@ function Header() {
         { "transform translate-y-0": visible, "transform -translate-y-full": !visible }
       )}
     >
-      <Container className="flex items-center justify-between">
+      <div className="flex items-center justify-between grow">
         <div className="flex items-center justify-start gap-4">
           <Link href="/" className="px-8 py-0">
             <Image src={cclogo} width={90} height={90} alt="Company Logo" />
           </Link>
-          <p className="text-[16px] text-[#0d240d] font-medium hidden md:block">
+          <p className="text-[18px] text-[#c64444] font-semibold hidden md:block">
             Auditing, Accounting, Tax and Management Advisory
           </p>
         </div>
@@ -52,7 +52,7 @@ function Header() {
                 className={classnames({
                   "bg-slate-100 text-black": link.href === currentPath,
                   "bg-[#515f53] text-white": link.href !== currentPath,
-                  "rounded-full px-5 py-2 shadow-lg hover:bg-slate-200 hover:text-black transition-all":
+                  "flex items-center justify-center rounded-2xl min-w-24 px-5 py-2 shadow-lg hover:bg-slate-200 hover:text-black transition-all active:bg-white":
                     true,
                 })}
               >
@@ -84,7 +84,7 @@ function Header() {
             </svg>
           </button>
         </div>
-      </Container>
+      </div>
       {isMenuOpen && (
         <div className="md:hidden bg-[#d0ddcc] bg-opacity-80 w-full py-4">
           <ul className="flex flex-col items-center gap-4">

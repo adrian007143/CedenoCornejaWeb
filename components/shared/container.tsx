@@ -4,6 +4,7 @@ interface containerProps {
 }
 
 function Container({ children, className }: containerProps) {
-  return <div className={`max-auto w-full ${className}`}>{children}</div>;
+  return <div className={`max-auto w-screen  ${className}`}>{children}</div>;
 }
 export default Container;
+  

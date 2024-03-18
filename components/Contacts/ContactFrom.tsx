@@ -1,16 +1,11 @@
 import { create } from "@/app/action/contactAction";
-import Form from "../forms/Form";
-import Input from "../forms/Input";
-import Button from "../ui/FormButton";
+import Form from "@/components/forms/Form";
+import Input from "@/components/forms/Input";
+import Button from "@/components/Contacts/actions/submitContactBtn";
+import { contactInput } from "@/constants";
 
-const contactInput = [
-  { id: "1", name: "firstname", type: "text", placeholder: "First Name" },
-  { id: "2", name: "lastname", type: "text", placeholder: "Last Name" },
-  { id: "3", name: "email", type: "email", placeholder: "Email Address" },
-  { id: "4", name: "contactno", type: "text", placeholder: "Contact No" },
-];
 
-const AddContact = () => {
+const ContactForm = () => {
   return (
     <Form
       action={create}
@@ -40,9 +35,9 @@ const AddContact = () => {
           className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
         ></textarea>
       </div>
-      <Button />
+      <Button/>
     </Form>
   );
 };
 
-export default AddContact;
+export default ContactForm;

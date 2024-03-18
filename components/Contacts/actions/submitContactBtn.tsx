@@ -2,7 +2,7 @@
 
 import { useFormStatus } from "react-dom";
 
-const Button = () => {
+const SubmitContactBtn = () => {
   const { pending } = useFormStatus();
   return (
     <button
@@ -14,4 +14,4 @@ const Button = () => {
   );
 };
 
-export default Button;
+export default SubmitContactBtn;

@@ -1,6 +1,11 @@
 "use client"
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
+import { Poppins } from "next/font/google"
+
+
+const font = Poppins({ subsets: ["latin"], weight:["600"] });
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,7 +21,7 @@ const HomePage = () => {
         <h1 className="p-8 text-center text-[#1b4a1bf9] font-extrabold text-4xl md:text-6xl lg:text-7xl">
           Cedeno Corneja CPAs Co.
         </h1>
-        <div className="text-center text-lg text-[#194219] font-semibold mb-10">
+        <div className={cn("text-center text-[30px] text-[#194219] font-semibold mb-10", font.className)}>
           Compliance is better than Compromise
         </div>
         <div className="flex justify-center">
@@ -32,7 +37,7 @@ const HomePage = () => {
             All About Us
           </h1>
 
-          <div className="mx-auto max-w-lg text-lg text-justify">
+          <div className="mx-auto max-w-2xl text-lg text-justify">
             <p>
               <span className="text-xl font-extrabold">CEDENO CORNEJA CPAS CO.</span>{" "}
               is an audit and accounting firm that offers a wide range of
